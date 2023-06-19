@@ -5,7 +5,7 @@ const app = express();
 
 mongoose
   .connect(
-    "mongodb+srv://admin:sheki@cluster0.jdydyme.mongodb.net/?retryWrites=true&w=majority"
+    "mongodb+srv://admin:*****@cluster0.jdydyme.mongodb.net/?retryWrites=true&w=majority"
   )
   .then(() => app.listen(5000))
   .then(() =>
