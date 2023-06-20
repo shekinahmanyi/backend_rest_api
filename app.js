@@ -1,11 +1,15 @@
 import express from "express";
 import mongoose from "mongoose";
+import router from "./routes/user-route";
 
 const app = express();
+app.use(express.json());
+app.use("/api/user", router);
+
 
 mongoose
   .connect(
-    "mongodb+srv://admin:*****@cluster0.jdydyme.mongodb.net/?retryWrites=true&w=majority"
+    "mongodb+srv://admin:sheki@cluster0.jdydyme.mongodb.net/?retryWrites=true&w=majority"
   )
   .then(() => app.listen(5000))
   .then(() =>
